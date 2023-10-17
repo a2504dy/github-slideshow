@@ -15,7 +15,13 @@ jobs:
     - name: Check Branch
       run: |
         echo "Branch: ${{ env.branch }}"
+        echo "Branch Name: ${GITHUB_REF#refs/heads/}"
 
     - name: Check Hash
       run: |
         echo "Sha: ${{ env.sha_short }}"
+        echo "Sha Name: $GITHUB_SHA"
+    
+    - name: Check Subject
+      run: |
+        echo "Commit Message: ${{ github.event.head_commit.message }}"
