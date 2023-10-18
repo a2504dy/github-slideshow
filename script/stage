@@ -2,6 +2,7 @@
 
 red=$'\e[1;31m'
 grn=$'\e[1;32m'
+blu=$'\e[0;35m'
 end=$'\e[0m'
 
 account='training-staging'
